@@ -1,0 +1,54 @@
+<form [formGroup]="editForm">
+<div class="row">
+  <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-success">Save</button>&nbsp;
+          <button type="button" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+        <label for="name" >Name</label>
+        <input type="text" name="name" formControlName="name" class="form-control" id="name">
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+          <label for="path" >Image Url</label>
+          <input type="text" name="path" formControlName="path" class="form-control" id="path">
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+          <img src="" name="preview" id="preview">
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+         <label for="desc" >Description</label>
+         <textarea name="desc" id="desc" formControlName="desc" rows="6" class="form-control"></textarea>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <input type="text" name="ingredient" class="form-control" placeholder="ingredient" id="ingredient">
+    </div>
+    <div class="col-md-2">
+        <input type="text" name="amount" class="form-control" placeholder="amount" id="amount">
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-danger">x</button>
+    </div>
+</div>
+</form>
