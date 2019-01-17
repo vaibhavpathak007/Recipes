@@ -1,6 +1,7 @@
 import { recipe } from "./recipe.model";
 import { Ingredient } from "src/app/shared/ingredient.model";
 import { Subject } from "rxjs/internal/Subject";
+  
 
 export class RecipeService {
     private recipes : recipe[] = [
@@ -41,6 +42,11 @@ export class RecipeService {
 
     deleteRecipe(index : number){
         this.recipes.splice(index,1);
+        this.recipeList.next(this.recipes.slice());
+    }
+
+    setRecipes(recipes: recipe[]) {
+        this.recipes = recipes;
         this.recipeList.next(this.recipes.slice());
     }
 }
