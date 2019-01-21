@@ -18,8 +18,6 @@ import { RecipeStarterComponent } from './recipes/recipe-starter/recipe-starter.
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from 'src/app/recipes/recipe.service';
 import { CommonDataService } from 'src/app/shared/commondata.service';
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +30,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeStarterComponent,
-    RecipeEditComponent,
-    SignupComponent,
-    SigninComponent
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
