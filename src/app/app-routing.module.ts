@@ -9,14 +9,7 @@ import { RecipeEditComponent } from "src/app/recipes/recipe-edit/recipe-edit.com
 
 
 const appRoutes: Routes = [
-    {path:'', redirectTo:'/recipes', pathMatch:'full'},
-    {path:'recipes', component: RecipesComponent, children:[
-        {path:'', component: RecipeStarterComponent},
-        {path:'new', component: RecipeEditComponent},
-        {path:':id', component: RecipeDetailsComponent},
-        {path:':id/edit', component: RecipeEditComponent}    
-    ]},
-    {path:'shopping', component: ShoppingListComponent}
+    {path:'', redirectTo:'/recipes', pathMatch:'full'}
 ];
 
 @NgModule({
