@@ -8,17 +8,17 @@ import { ShoppingService } from './shopping-list/shopping.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeService } from 'src/app/recipes/recipe.service';
 import { CommonDataService } from 'src/app/shared/commondata.service';
-import { RecipeModule } from 'src/app/recipes/recipe.module';
 import { ShoppingModule } from 'src/app/shopping-list/shopping.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    RecipeModule,
     ShoppingModule,
     AppRoutingModule,
     HttpModule
