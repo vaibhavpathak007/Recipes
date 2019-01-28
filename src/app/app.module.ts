@@ -3,23 +3,23 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './core/header/header.component';
 import { ShoppingService } from './shopping-list/shopping.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeService } from 'src/app/recipes/recipe.service';
 import { CommonDataService } from 'src/app/shared/commondata.service';
 import { ShoppingModule } from 'src/app/shopping-list/shopping.module';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './core/home/home.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ShoppingModule,
+    CoreModule,
     AppRoutingModule,
     HttpModule
   ],
