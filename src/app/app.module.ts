@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http'
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -21,7 +21,7 @@ import { CoreModule } from 'src/app/core/core.module';
     ShoppingModule,
     CoreModule,
     AppRoutingModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [ShoppingService, RecipeService, CommonDataService],
   bootstrap: [AppComponent]

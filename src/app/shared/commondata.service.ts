@@ -2,26 +2,24 @@ import { Injectable } from "@angular/core";
 import { RecipeService } from "../recipes/recipe.service";
 import { map } from 'rxjs/Operators'
 import { Http, Response } from "@angular/http";
+import { HttpClient } from "@angular/common/http";
 
 import { recipe } from "src/app/recipes/recipe.model";
-import { forEach } from "@angular/router/src/utils/collection";
 
 @Injectable()
 export class CommonDataService {
 
-    constructor(private recipeservice: RecipeService, private http: Http) { }
+    constructor(private recipeservice: RecipeService, private http: HttpClient) { }
 
     fetchData() {
         return this.http.get("https://ng-recipe-book-98ef5.firebaseio.com/recipe.json")
-        .pipe(map((response : Response)=>{
-            let recipes : recipe[] = response.json();
+        .pipe(map((recipes : recipe[])=>{
             for(let recipe of recipes){
                if(!recipe.ingredients){
-                console.log("no ingredient found for recipe : "+recipe.name);
                 recipe.ingredients=[];
                } 
             }
-            return recipes;
+            return recipes; 
         }))
         .subscribe((recipes : recipe[])=>{
             this.recipeservice.setRecipes(recipes);
